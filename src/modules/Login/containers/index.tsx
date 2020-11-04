@@ -10,6 +10,7 @@ import jwt from 'jwt-simple';
 import axios from 'axios';
 import { useForm } from '../../../CustomHooks';
 import { MainContext } from '../../../contexts';
+import Logo from '../../../images/logo.png';
 
 const PageContainer = styled.div`
   display: flex;
@@ -36,6 +37,12 @@ const StyledAlert = styled(Alert)`
   width: 100%;
   padding: 5px;
   text-align: center;
+`;
+
+const StyledLogo = styled.img`
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
 `;
 
 const Login = (props: any) => {
@@ -73,7 +80,8 @@ const Login = (props: any) => {
   return (
     <PageContainer>
       <FormContainer>
-        <h1>Login</h1>
+        <StyledLogo src={Logo} alt="logo"/>
+        <h3>Jobcoin Login</h3>
         <Form onSubmit={e => handleSubmit(e)}>
           <Input
             type="text" // need to change this once users with emails are available
