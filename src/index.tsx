@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { MainContextProvider } from './contexts';
+import AppRoutes from './AppRoutes';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.Fragment>
+    <MainContextProvider>
+      <AppRoutes>
+        <App />
+      </AppRoutes>
+    </MainContextProvider>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
