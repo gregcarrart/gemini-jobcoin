@@ -60,6 +60,7 @@ const TransferInfo = () => {
         }
       })
       .catch(err => {
+        setLoading(false);
         setFormAlert('could not complete this request.');
       });
     };
