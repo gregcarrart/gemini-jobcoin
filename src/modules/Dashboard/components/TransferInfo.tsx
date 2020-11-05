@@ -32,7 +32,7 @@ const TransferInfo = () => {
     const onSubmit = async () => {
       setLoading(true);
       setFormAlert('');
-      const apiUrl = `http://jobcoin.gemini.com/granddad-coagulant/api/transactions`;
+      const apiUrl = `https://jobcoin.gemini.com/granddad-coagulant/api/transactions`;
       const secret = 'secret';
       const fromAddress = jwt.decode(jwtToken, secret);
 
